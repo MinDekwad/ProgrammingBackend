@@ -13,7 +13,7 @@ app.use(cors());
 app.use('/api/v1/programming/', routeUser);
 app.use('/api/v1/programming/',auth,routeProgramming);
 app.use(bodyParser.json());
-app.use(logger('dev'))
+app.use(logger('dev'));
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
