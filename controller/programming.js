@@ -13,7 +13,6 @@ exports.programReadID = async (req,res) => {
     try{
         const {id} = req.params;
         const programming = await models.Programming.findByPk(id);
-        console.log(programming)
         return res.json({data: programming})
     }catch(error){
         return res.json({data:error.message})
